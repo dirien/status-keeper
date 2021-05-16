@@ -10,6 +10,6 @@ type StatusPage struct {
 
 func GetStatusPageComponentURL(statusPage *StatusPage) string {
 	return fmt.Sprintf(
-		"https:/%s/api/%s/components.json",
+		"https://%s/api/%s/components.json",
 		statusPage.Url, statusPage.Version)
 }

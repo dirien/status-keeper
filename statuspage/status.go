@@ -23,6 +23,7 @@ func Download(statusPage *StatusPage) (Status, error) {
 	resp, err := http.Get(GetStatusPageComponentURL(statusPage))
 
 	if err != nil {
+		log.Printf("error %s", err.Error())
 		log.Fatal("error occurred, please try again")
 	}
 	defer resp.Body.Close()
