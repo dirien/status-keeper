@@ -20,7 +20,8 @@ func main() {
 	}
 
 	if status == nil {
-		fmt.Errorf("cannot get status: %s", name)
+		fmt.Println(fmt.Errorf("cannot get status: %s", name))
+		return
 	}
 
 	fmt.Printf("Status %s\n", status.Name)
